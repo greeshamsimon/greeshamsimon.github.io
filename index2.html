@@ -631,13 +631,14 @@
              .attr("transform", "translate(320, 350)")
              .call(d3.axisLeft(y).ticks(7));
 
-       svg2.selectAll("myCircles")
+       svg2.selectAll("anomalies")
          .data(anomalyLineData)
          .enter()
          .append("circle")
          .attr("fill", "#fcfc42")
+         .attr("transform", "translate(0, 600)")
          .attr("cx", function(d) { return 320+x(d.time)})
-         .attr("cy", function(d) { return 350+y(d.mean)})
+         .attr("cy", function(d) { return 600+y(d.mean)})
          .style("fill-opacity", function(d){return d[selAlg]==1?1:0;})
          .attr("r", 3);
 
@@ -645,14 +646,14 @@
             .attr("text-anchor", "start")
             .attr("x", 200)
             .attr("y", 340)
-            .text("Log electron density")
+            .text("log electron density")
             .style("fill", "white")
 
         svg2.append("text")
             .attr("text-anchor", "start")
             .attr("x", 580)
             .attr("y", 640)
-            .text("Time")
+            .text("time")
             .style("fill", "white")
 
 
