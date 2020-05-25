@@ -1,2 +1,3 @@
-# greeshamsimon.github.io
-NASA JPL MSiA Project Website Test
+NASA JPL Magnetosphere Project Final Demo
+
+
